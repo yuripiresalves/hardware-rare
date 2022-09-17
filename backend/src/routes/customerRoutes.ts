@@ -1,9 +1,15 @@
 import { Router } from 'express';
+import { PrismaClient } from '@prisma/client';
 
 const customoerRoutes = Router();
+const prisma = new PrismaClient({
+  log: ['query'],
+});
 
-customoerRoutes.get('/customers', (request, response) => {
-  return response.json({ id: 1, customerName: 'yuri' });
+customoerRoutes.get('/customers', async (request, response) => {
+  const customers = await prisma.customer.findMany();
+
+  return response.json(customers);
 });
 
 customoerRoutes.post('/customers', (request, response) => {
