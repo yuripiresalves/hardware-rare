@@ -11,6 +11,29 @@ datasource db {
 }
 
 model Customer {
-  id   String @id @default(uuid())
-  name String
+  id       String @id @default(uuid())
+  name     String
+  email    String
+  phone    String
+  cpf      String
+  password String
+}
+
+model Category {
+  id      String    @id @default(uuid())
+  title   String    @unique
+  product Product[]
+}
+
+model Product {
+  id          String   @id @default(uuid())
+  categoryId  String
+  imageUrl    String
+  title       String
+  price       String
+  description String
+  quantity    Int
+  createdAt   DateTime @default(now())
+
+  category Category @relation(fields: [categoryId], references: [id])
 }
