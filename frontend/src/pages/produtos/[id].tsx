@@ -1,4 +1,5 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
+import { ShoppingCartSimple } from 'phosphor-react';
 
 import axios from 'axios';
 
@@ -37,7 +38,8 @@ const ProductDetails: NextPage<Product> = ({ product }: Product) => {
             Estoque: {product.quantity}
           </span>
         </div>
-        <button className="bg-violet-500 p-4 text-white font-bold rounded-lg hover:bg-violet-600 hover:transition-all">
+        <button className="flex items-center justify-center gap-4 bg-violet-500 p-4 text-white font-bold rounded-lg hover:bg-violet-600 hover:transition-all">
+          <ShoppingCartSimple size={24} weight="bold" />
           Adicionar ao carrinho
         </button>
       </div>

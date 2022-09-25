@@ -16,8 +16,15 @@ export function ProductCard({ id, imageUrl, title, price }: ProductCardProps) {
         />
       </div>
       <div className="flex flex-col gap-4">
-        <strong className="text-violet-500 text-center">{title}</strong>
-        <span className="text-center">R$ {price}</span>
+        <strong
+          title={title}
+          className="text-violet-500 text-center  px-4 truncate"
+        >
+          {title}
+        </strong>
+        <span className="text-center text-zinc-500">
+          R$ <strong className="text-zinc-700">{price}</strong>
+        </span>
         <a
           href={`/produtos/${id}`}
           className="bg-violet-500  font-bold text-white flex justify-center items-center py-3 hover:bg-violet-600 hover:transition-all"
