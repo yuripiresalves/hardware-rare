@@ -7,7 +7,7 @@ interface ProductCardProps {
 
 export function ProductCard({ id, imageUrl, title, price }: ProductCardProps) {
   return (
-    <div className="w-96 h-96 flex flex-col justify-between border rounded-lg overflow-hidden">
+    <div className="w-96 h-96 flex flex-col justify-between border rounded-lg overflow-hidden justify-self-center">
       <div className="w-full h-60">
         <img
           className="w-full h-full object-cover"
