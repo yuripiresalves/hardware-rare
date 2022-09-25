@@ -12,6 +12,26 @@ productRoutes.get('/products', async (request, response) => {
   return response.json(products);
 });
 
+productRoutes.get('/products/:id', async (request, response) => {
+  const productId = request.params.id;
+  const product = await prisma.product.findUniqueOrThrow({
+    select: {
+      id: true,
+      title: true,
+      imageUrl: true,
+      description: true,
+      price: true,
+      quantity: true,
+      category: true,
+    },
+    where: {
+      id: productId,
+    },
+  });
+
+  return response.json(product);
+});
+
 productRoutes.post('/products', async (request, response) => {
   const body = request.body;
 
