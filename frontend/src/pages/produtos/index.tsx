@@ -25,7 +25,7 @@ const Home: NextPage = () => {
       <h2 className="text-3xl text-violet-600 font-bold py-8">
         Lista de produtos
       </h2>
-      <div className="h-full flex gap-12 flex-wrap">
+      <div className="h-full grid grid-cols-3 gap-12">
         {products?.map((product) => {
           return (
             <ProductCard

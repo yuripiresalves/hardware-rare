@@ -2,7 +2,7 @@ import { ShoppingCartSimple } from 'phosphor-react';
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between h-20 container mx-auto p-4 shadow-md">
+    <header className="flex items-center justify-between h-20 container mx-auto p-4 2xl:px-20 shadow-md">
       <a href="/produtos">
         <img className="w-28" src="/assets/hr-logo.png" alt="" />
       </a>
