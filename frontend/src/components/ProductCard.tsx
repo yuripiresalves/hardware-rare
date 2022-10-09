@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 interface ProductCardProps {
   id: string;
   imageUrl: string;
@@ -25,12 +27,11 @@ export function ProductCard({ id, imageUrl, title, price }: ProductCardProps) {
         <span className="text-center text-zinc-500">
           R$ <strong className="text-zinc-700">{price}</strong>
         </span>
-        <a
-          href={`/produtos/${id}`}
-          className="bg-violet-500  font-bold text-white flex justify-center items-center py-3 hover:bg-violet-600 hover:transition-all"
-        >
-          Ver detalhes
-        </a>
+        <Link href={`/produtos/${id}`}>
+          <a className="bg-violet-500  font-bold text-white flex justify-center items-center py-3 hover:bg-violet-600 hover:transition-all">
+            Ver detalhes
+          </a>
+        </Link>
       </div>
     </div>
   );
