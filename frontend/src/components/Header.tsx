@@ -3,7 +3,7 @@ import { Plus, ShoppingCartSimple, SignOut, User } from 'phosphor-react';
 
 export function Header() {
   return (
-    <header className="h-20 p-4 shadow-md relative">
+    <header className="h-20 p-4 shadow-md">
       <div className="flex items-center justify-between container mx-auto">
         <Link href="/produtos">
           <a>
@@ -18,7 +18,7 @@ export function Header() {
               Ver carrinho
             </a>
           </Link>
-          <div className="group">
+          <div className="group relative">
             <a className="flex items-center gap-3 group cursor-pointer">
               <span className="text-violet-600">Yuri Alves</span>
               <img
@@ -27,7 +27,7 @@ export function Header() {
                 alt=""
               />
             </a>
-            <div className="hidden group-hover:block absolute right-4 -bottom-[154px] bg-white rounded-lg shadow-lg w-52 p-4 text-violet-500">
+            <div className="hidden group-hover:block absolute -right-4 -bottom-[170px] bg-white rounded-lg shadow-lg w-52 p-4 text-violet-500">
               <ul className="flex flex-col gap-4 ">
                 <li className="pb-4 border-b border-violet-200 hover:text-violet-600">
                   <Link href="/minha-conta">
