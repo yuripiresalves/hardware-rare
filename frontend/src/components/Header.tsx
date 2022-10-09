@@ -27,7 +27,7 @@ export function Header() {
                 alt=""
               />
             </a>
-            <div className="hidden group-hover:block absolute -right-4 -bottom-[170px] bg-white rounded-lg shadow-lg w-52 p-4 text-violet-500">
+            <div className="hidden group-hover:block absolute right-0 -bottom-[170px] bg-white rounded-lg shadow-lg w-52 p-4 text-violet-500">
               <ul className="flex flex-col gap-4 ">
                 <li className="pb-4 border-b border-violet-200 hover:text-violet-600">
                   <Link href="/minha-conta">
