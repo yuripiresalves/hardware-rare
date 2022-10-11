@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import { Barcode, CreditCard, Trash } from 'phosphor-react';
 import { ChangeEvent, FormEvent, useState } from 'react';
-// import pixImage from '*.avif' 
+
 
 const Car: NextPage = () => {
     const [quantity, setQuantity] = useState(1);
