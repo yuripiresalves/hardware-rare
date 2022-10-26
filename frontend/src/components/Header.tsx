@@ -1,10 +1,12 @@
-import Link from "next/link";
-import { Plus, ShoppingCartSimple, SignOut, User } from "phosphor-react";
+import Link from 'next/link';
+import { Plus, ShoppingCartSimple, SignOut, User } from 'phosphor-react';
 
 interface HeaderProps {
   isHome: boolean;
+  isLogin: boolean;
+  isRegister: boolean;
 }
-export function Header({ isHome }: HeaderProps) {
+export function Header({ isHome, isLogin, isRegister }: HeaderProps) {
   return (
     <header className="h-20 p-4 shadow-md">
       <div className="flex items-center justify-between container mx-auto">
@@ -13,13 +15,12 @@ export function Header({ isHome }: HeaderProps) {
             <img className="w-28" src="/assets/hr-logo.png" alt="" />
           </a>
         </Link>
-        {isHome ? (
-           <Link href="/login">
-           <a className="outline-2 flex gap-3 border border-violet-600 rounded-lg p-3 px-4 text-violet-600 hover:bg-violet-600 hover:text-white hover:transition-all hover:duration-300 text-center">
-             Entrar  <User size={24} />
-            
-           </a>
-         </Link>
+        {isHome || isLogin || isRegister ? (
+          <Link href="/login">
+            <a className="outline-2 flex gap-3 border border-violet-600 rounded-lg p-3 px-4 text-violet-600 hover:bg-violet-600 hover:text-white hover:transition-all hover:duration-300 text-center">
+              Entrar <User size={24} />
+            </a>
+          </Link>
         ) : (
           <div className="flex items-center gap-8">
             <Link href="/carrinho">
